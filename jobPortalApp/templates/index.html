@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+{% block content %}
+
+<!-- carousel -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="font-family: 'Montserrat', sans-serif;">
+            <img class="d-block w-100" src="{% static 'images/j1.jpg' %}" alt="First slide">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 800px;">
+                    <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">
+                        <i class="fa-sharp fa-regular fa-dash"></i></i>Find Popular Jobs<i
+                            class="fa-sharp fa-regular fa-dash"></i></i>
+                    </h6>
+                    <h1 class="display-3 text-white mb-4 animated slideInDown">Build Your Career</h1>
+                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
+                        class="p-3 animated slideInDown">
+                        <table class=" p-4">
+                            <tr>
+                                <td> <input type="text" class="form-control rounded-0 "
+                                        placeholder="Skills,Designation,Companies"></td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Location</option>
+                                        <option value="option1">Kochi</option>
+                                        <option value="option2">Trivandrum</option>
+                                        <option value="option3">Banglore</option>
+                                        <option value="option4">Chennai</option>
+                                        <option value="option5">Mumbai</option>
+                                        <option value="option6">Delhi</option>
+                                        
+                                    </select>
+                                </td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Category</option>
+                                        <option value="option1">All Category</option>
+                                        <option value="option2">Full Time</option>
+                                        <option value="option3">Part Time</option>
+                                        <option value="option3">Remote</option>
+                                    </select>
+                                </td>
+                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
+                                        style="background-color: rgb(255, 111, 0);">
+                                        <i class="fas fa-search"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel-item" style="font-family: 'Montserrat', sans-serif;">
+            <img class="d-block w-100" src="{% static 'images/j2.jpg' %}" alt="Second slide">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 700px;">
+                    <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">
+                        <i class="fa-sharp fa-regular fa-dash"></i></i>Find Popular Jobs<i
+                            class="fa-sharp fa-regular fa-dash"></i></i>
+                    </h6>
+                    <h1 class="display-3 text-white mb-4 animated slideInDown">Build Your Career</h1>
+                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
+                        class="p-3 animated slideInDown">
+                        <table class=" p-4">
+                            <tr>
+                                <td> <input type="text" class="form-control rounded-0 "
+                                        placeholder="Skills,Designation,Companies"></td>
+                                        <td> <select class="form-control rounded-0 align-middle">
+                                            <option selected disabled>Select Location</option>
+                                            <option value="option1">Kochi</option>
+                                            <option value="option2">Trivandrum</option>
+                                            <option value="option3">Banglore</option>
+                                            <option value="option4">Chennai</option>
+                                            <option value="option5">Mumbai</option>
+                                            <option value="option6">Delhi</option>
+                                            
+                                        </select>
+                                    </td>
+                                    <td> <select class="form-control rounded-0 align-middle">
+                                            <option selected disabled>Select Category</option>
+                                            <option value="option1">All Category</option>
+                                            <option value="option2">Full Time</option>
+                                            <option value="option3">Part Time</option>
+                                            <option value="option3">Remote</option>
+                                        </select>
+                                    </td>
+                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
+                                        style="background-color: rgb(255, 111, 0);">
+                                        <i class="fas fa-search"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Category Area Starts -->
+<section class="category-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-top text-center">
+                    <h2>Find job by category</h2>
+                    <p>Open lesser winged midst wherein may morning</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4">
+                    <img src="{% static 'images/cat1.png' %}" alt="category">
+                    <h4>accounting & Finance</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4">
+                    <img src="assets/images/cat2.png" alt="category">
+                    <h4>production & operation</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4">
+                    <img src="assets/images/cat3.png" alt="category">
+                    <h4>telecommunication</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4">
+                    <img src="assets/images/cat4.png" alt="category">
+                    <h4>garments & textile</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4 mb-lg-0">
+                    <img src="assets/images/cat5.png" alt="category">
+                    <h4>marketing and sales</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4 mb-lg-0">
+                    <img src="assets/images/cat6.png" alt="category">
+                    <h4>engineer & architech</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center mb-4 mb-md-0">
+                    <img src="assets/images/cat7.png" alt="category">
+                    <h4>design & crative</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single-category text-center">
+                    <img src="assets/images/cat8.png" alt="category">
+                    <h4>customer support</h4>
+                    <h5>250 open job</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Category Area End -->
+
+
+{% endblock %}

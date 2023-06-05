@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/ic.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ca2474264d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+        :root {
+            --heading: rgb(255, 153, 0);
+            --foot: #0F172B;
+
+        }
+
+        .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: var(--heading);
+            border-radius: 5px;
+            color: rgb(228, 224, 224);
+        }
+
+        .navbar-nav .btn:hover {
+            background-color: rgb(2, 8, 52);
+            transition: background-color 0.3s ease;
+            color: whitesmoke;
+
+        }
+
+
+        .carousel-caption {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 43, .7);
+            z-index: 1;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::before {
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 2px;
+            top: 50%;
+            left: -55px;
+            margin-top: -1px;
+            background: var(--heading);
+        }
+
+        .section-title::after {
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 2px;
+            top: 50%;
+            right: -55px;
+            margin-top: -1px;
+            background: var(--heading);
+        }
+
+        .section-title.text-start::before,
+        .section-title.text-end::after {
+            display: none;
+        }
+
+        .dropdown:focus,
+        .dropdown:active,
+        .dropdown:hover,
+        .dropdown.show {
+            outline: none !important;
+            box-shadow: none !important;
+            border-color: transparent !important;
+        }
+
+        
+        .footer {
+            position: relative;
+            margin-top: -110px;
+            padding-top: 180px;
+        }
+
+        .footer .btn.btn-social {
+            margin-right: 5px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--heading);
+            border: 1px solid #FFFFFF;
+            border-radius: 35px;
+            transition: .3s;
+        }
+
+        .footer .btn.btn-social:hover {
+            color: var(--heading);
+        }
+
+        .footer .btn.btn-link {
+            display: block;
+            margin-bottom: 5px;
+            padding: 0;
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 15px;
+            font-weight: normal;
+            text-transform: capitalize;
+            transition: .3s;
+        }
+
+        .footer .btn.btn-link::before {
+            position: relative;
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 10px;
+        }
+
+        .footer .btn.btn-link:hover {
+            letter-spacing: 1px;
+            box-shadow: none;
+        }
+
+        .footer .copyright {
+            padding: 25px 0;
+            font-size: 15px;
+            border-top: 1px solid rgba(256, 256, 256, .1);
+        }
+
+        .footer .copyright a {
+            color: var(--light);
+        }
+
+        .footer .footer-menu a {
+            margin-right: 15px;
+            padding-right: 15px;
+            border-right: 1px solid rgba(255, 255, 255, .3);
+        }
+
+        .footer .footer-menu a:last-child {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: none;
+        }
+    </style>
+    <header style="position: fixed; z-index:2; width: 100%;">
+        <div class="container-fluid bg-white px-0">
+            <div class="row gx-0">
+                <div class="col-lg-4 bg-white d-none d-lg-block">
+                    <a href="index.html"
+                        class="navbar-brand w-100 h-100 m-0 pt-2 d-flex align-items-center justify-content-center">
+                        <h1 class="m-0 font-weight-bold animated fadeIn" style="font-family: Lucida Handwriting; font-size: 50px;color: var(--heading); 
+                            text-shadow: 2px 2px 4px black;">JobsNow.com
+                        </h1>
+                    </a>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row gx-0 bg-dark d-none d-lg-flex">
+                        <div class="col-lg-7 px-5 text-start">
+                            <div class="h-100 d-inline-flex align-items-center py-2 mr-4">
+                                <i class="fa fa-envelope  mr-2" style="color: var(--heading);"></i>
+                                &nbsp;&nbsp;<p class="mb-0 text-light">jobsnow@gmail.com</p>
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2">
+                                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                <i class="fa fa-phone-alt  mr-2" style="color: var(--heading);"></i>
+                                &nbsp;&nbsp;<p class="mb-0 text-light">+91 974 345 6789</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center  py-2">
+                                <a class="me-3" href=""><i class="fab fa-facebook-f  mx-2"
+                                        style="color: var(--heading);"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-twitter  mx-2"
+                                        style="color: var(--heading);"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-linkedin-in  mx-2"
+                                        style="color: var(--heading);"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-instagram  mx-2"
+                                        style="color: var(--heading);"></i></a>
+                                <a class="" href=""><i class="fab fa-youtube  mx-2"
+                                        style="color: var(--heading);"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white text-white">
+                        <a class="navbar-brand d-block d-lg-none" href="#">
+                            <h1 class="m-0  "
+                                style="font-family: Lucida Handwriting; font-size: 50px;color: var(--heading);">
+                                JobsNow</h1>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav  ml-auto mt-2 ">
+                                <li class="nav-item active ">
+                                    <a class="nav-link  " href="#">Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  " href="#">Upload your resume</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-sm  text-light mx-2"
+                                        style="background-color: var(--foot);" href="#">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="btn  rounded-1 py-2 px-md-5 d-none d-lg-block"
+                                        style="background-color: var(--heading); transition: background-color 0.3s ease;">
+                                        Employers/Post Job&nbsp;<i class="fa fa-arrow-right ms-3"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <div style="padding-top: 115px;">
+
+        {% block content %}
+
+        {% endblock %}
+
+    </div>
+    <section id="sec_contact">
+        <div class="container-fluid  text-light footer wow fadeIn" data-wow-delay="0.1s"
+            style="background-color: var(--foot);">
+            <div class="container pb-5" style="font-family: verdana;">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class=" rounded p-4" style="background-color: var(--heading);">
+                            <a href="index.html" style="text-decoration: none;">
+                                <h1 class="text-white text-uppercase mb-3">CoffeeHouse</h1>
+                            </a>
+                            <p class="text-white mb-0">
+                                Download <a class="text-dark fw-medium" href=""
+                                    style="text-decoration: none;">CoffeeHouse –
+                                    Premium Version</a>,
+                                Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diamstet diam sed
+                                stet
+                                lorem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h6 class="section-title text-start  text-uppercase mb-4" style="color: var(--heading);">Contact
+                        </h6>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-uppercase mb-4" style="color: var(--heading);">
+                                    Company</h6>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">About Us</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Contact Us</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Privacy Policy</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Terms & Condition</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Support</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-uppercase mb-4" style="color: var(--heading);">
+                                    Services</h6>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Food & Restaurant</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Spa & Fitness</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Sports & Gaming</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">Event & Party</a>
+                                <a class="btn btn-link" href="" style="text-decoration: none;">GYM & Yoga</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInDown {
+            animation-name: slideInDown;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInLeft {
+            animation-name: slideInLeft;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInRight {
+            animation-name: slideInRight;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+    </style>
+
+</body>
+
+</html>
