@@ -1,0 +1,302 @@
+{% extends 'emp_base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+{% block content %}
+
+<!-- carousel -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="font-family: 'Montserrat', sans-serif;">
+            <img class="d-block w-100" src="{% static 'images/emp6.jpg' %}" alt="First slide">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 800px;">
+                    <h6 class="section-title text-white text-uppercase mb-2 animated slideInDown">
+                        <i class="fa-sharp fa-regular fa-dash"></i>From Campus to Senior Level Hiring<i
+                            class="fa-sharp fa-regular fa-dash"></i>
+                    </h6>
+                    <h1 class=" text-white mb-4 animated slideInDown" style="font-size:9vh;">Build Your Team</h1>
+                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
+                        class="p-3 animated slideInDown">
+                        <table class=" p-4">
+                            <tr>
+                                <td> <input type="text" class="form-control rounded-0 "
+                                        placeholder="Skills,Designation,Companies"></td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Location</option>
+                                        <option value="option1">Kochi</option>
+                                        <option value="option2">Trivandrum</option>
+                                        <option value="option3">Banglore</option>
+                                        <option value="option4">Chennai</option>
+                                        <option value="option5">Mumbai</option>
+                                        <option value="option6">Delhi</option>
+
+                                    </select>
+                                </td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Category</option>
+                                        <option value="option1">All Category</option>
+                                        <option value="option2">Full Time</option>
+                                        <option value="option3">Part Time</option>
+                                        <option value="option3">Remote</option>
+                                    </select>
+                                </td>
+                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
+                                        style="background-color: rgb(255, 111, 0);">
+                                        <i class="fas fa-search"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel-item" style="font-family: 'Montserrat', sans-serif;">
+            <img class="d-block w-100" src="{% static 'images/j2.jpg' %}" alt="Second slide">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style="max-width: 700px;">
+                    <h6 class="section-title text-white text-uppercase mb-2 animated slideInDown">
+                        <i class="fa-sharp fa-regular fa-dash"></i>From Campus to Senior Level Hiring<i
+                            class="fa-sharp fa-regular fa-dash"></i>
+                    </h6>
+                    <h1 class=" text-white mb-4 animated slideInDown" style="font-size:9vh;">Build Your Team</h1>
+                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
+                        class="p-3 animated slideInDown">
+                        <table class=" p-4">
+                            <tr>
+                                <td> <input type="text" class="form-control rounded-0 "
+                                        placeholder="Skills,Designation,Companies"></td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Location</option>
+                                        <option value="option1">Kochi</option>
+                                        <option value="option2">Trivandrum</option>
+                                        <option value="option3">Banglore</option>
+                                        <option value="option4">Chennai</option>
+                                        <option value="option5">Mumbai</option>
+                                        <option value="option6">Delhi</option>
+
+                                    </select>
+                                </td>
+                                <td> <select class="form-control rounded-0 align-middle">
+                                        <option selected disabled>Select Category</option>
+                                        <option value="option1">All Category</option>
+                                        <option value="option2">Full Time</option>
+                                        <option value="option3">Part Time</option>
+                                        <option value="option3">Remote</option>
+                                    </select>
+                                </td>
+                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
+                                        style="background-color: rgb(255, 111, 0);">
+                                        <i class="fas fa-search"></i></button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!--body-->
+
+<section id="about" class="about">
+    <div class="container py-5" data-aos="fade-up">
+        <div class="section-title pb-5">
+            <h2>PRODUCTS & SERVICES</h2>
+            <p>India’s No.1 Job Posting
+                & Recruitment Platform</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                    <img src="{% static 'images/emp1.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+                <h3 class="">Job Posting Services - Get Quality Applies</h3>
+                <p class="fst-italic">
+                    Reach out to millions of jobseekers and hire quickly with our fast and easy job posting services.
+                </p>
+                <div class="row pt-3">
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="fas fa-clock"></i> &nbsp; Segment - Cash.</li>
+                            <li><i class="fas fa-users"></i> &nbsp;Exchange - NSE & BSE.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="fas fa-briefcase"></i> &nbsp;Segment - Cash.</li>
+                            <li><i class="far fa-calendar"></i> &nbsp;Exchange - NSE & BSE.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fst-italic">
+                    Reach out to millions of jobseekers and hire quickly with our fast and easy job posting services.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-2 content">
+                <h3>Search Best Talent with Resume Database Access - Resdex</h3>
+                <p class="fst-italic">
+                    Source candidates from Resdex − India’s largest Talent Pool and find the perfect talent for your
+                    organisation.
+                </p>
+                <div class="row pt-3">
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="fas fa-clock"></i> &nbsp; Segment - Cash.</li>
+                            <li><i class="fas fa-users"></i> &nbsp;Exchange - NSE & BSE.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul>
+                            <li><i class="fas fa-briefcase"></i> &nbsp;Segment - Cash.</li>
+                            <li><i class="far fa-calendar"></i> &nbsp;Exchange - NSE & BSE.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="fst-italic">
+                    Source candidates from Resdex − India’s largest Talent Pool and find the perfect talent for your
+                    organisation.
+                </p>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="zoom-in" data-aos-delay="100">
+                <div class="about-img">
+                    <img src="{% static 'images/emp2.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="why-us" class="why-us py-5">
+    <div class="container pb-5" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Steps To</h2>
+            <p class="text-light">Reach Out Best Candidates</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                    <span>01</span>
+                    <h4>Create a Compelling Company Profile</h4>
+                    <p class="text-justify">Start by creating an attractive and informative company profile . Highlight
+                        your company's values, culture, and mission. </p>
+                    <a href="{% url 'create_company' %}" class="btn  mt-4 w-100 stretched-link">Create</a><br>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="200">
+                    <span>02</span>
+                    <h4>Post Your Job with Clear Details</h4>
+                    <p class="text-justify">Provide clear and detailed information about the position. Include the job
+                        title, responsibilities, qualifications, and any specific skills or experience required.</p>
+                    <a href="{% url 'post_job_page' %}" class="btn  mt-4 w-100 stretched-link">Post</a><br>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" data-aos="zoom-in" data-aos-delay="300">
+                    <span>03</span>
+                    <h4>Utilize Advanced Filtering Tools</h4>
+                    <p class="text-justify"> Provide employers with the ability to search for candidates based on
+                        specific criteria such as skills, experience level, education, location, and more.</p>
+                    <a href="#" class="btn  mt-4 w-100">Read more</a><br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="finance" class="finance">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>JOBSNOW BLOG POST</h2>
+            <p>What's New</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="{% static 'images/emp3.avif' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>JobsNow Trends</h4>
+                            <p class="text-light">Hiring Trends for IT, BFSI, BPO/ITes, & Pharma during Jul’19 – Sep’19
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{% static 'images/emp4.jpeg' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Get more responses through chat with jobseekers</h4>
+                            <p class="text-light">Quickly connect with jobseekers through chat and get more responses.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="{% static 'images/emp5.jpg' %}" class="img-fluid" alt="">
+                    <div class="member-info">
+                        <div class="member-info-content">
+                            <h4>Smart Comments, Trackers & Semantic Search in RESDEX</h4>
+                            <p class="text-light">Improve efficiency by using smart comments, tasks and reminders.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

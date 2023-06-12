@@ -1,0 +1,654 @@
+{% extends 'emp_base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+
+{% block content %}
+<style>
+
+</style>
+<section class="bg-light">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title pt-5">
+            <h2>View Applications</h2>
+            <p>Posted Jobs</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jobs-tab tab-item ">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item active">
+                            <a class="nav-link p-2" id="home-tab" data-toggle="tab" href="#recent" role="tab"
+                                aria-controls="home" aria-selected="true">recent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" id="profile-tab" data-toggle="tab" href="#full-time" role="tab"
+                                aria-controls="profile" aria-selected="false">full time</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" id="contact-tab" data-toggle="tab" href="#part-time" role="tab"
+                                aria-controls="part-time" aria-selected="false">part time</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link p-2" id="contact-tab2" data-toggle="tab" href="#remote" role="tab"
+                                aria-controls="remote" aria-selected="false">remote</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <hr class="mt-5 font-weight-bold"> -->
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-lg-12">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold ">Software Engineer <span class="text-right ml-3"><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        <a href="{% url 'editjob' %}" class="bg-dark px-2 pb-2 rounded" ><i class="fas fa-pencil-alt edit-icon text-light"></i></a></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Experience : 3yrs</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-users"></i> Number of Applications : 30</h5>
+                                    </li>
+
+                                </ul>
+                                <ul class="detail nav nav-tabs" id="myTab1" role="tablist">
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="detail-tab" data-toggle="tab" href="#detail"
+                                            role="tab" aria-controls="detail" aria-selected="false">View
+                                            Applications</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="clode-tab" data-toggle="tab" href="#close"
+                                            role="tab" aria-controls="close" aria-selected="true">Close</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job3.png' %}" alt="job">
+                            </div>
+                            <!-- <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Full time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div> -->
+                        </div>
+                        <!------------------------- Details ----------------------------------------------------------------------------------------->
+                        <div class="tab-content " id="myTabContent">
+                            <div class="tab-pane fade " id="detail" role="tabpanel" aria-labelledby="detail-tab">
+                                <div class="single-job mb-4 d-lg-flex justify-content-between"
+                                    style="height: 500px; overflow-y: scroll;">
+                                    <div class="job-text">
+                                        <table class="table table-bordered table-hover">
+                                            <tr class="text-center text-white " style="background-color: var(--foot);">
+                                                <th>Name</th>
+                                                <th>Address</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Experience</th>
+                                                <th>Skills</th>
+                                                <th>Resume</th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade show active" id="close" role="tabpanel"
+                                aria-labelledby="close-tab">
+
+
+                            </div>
+                        </div>
+                        <!-------------------------------------- Details end ----------------------------------------------------------------------------------------->
+
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Java Software Developer<span class="text-right ml-3"><i
+                                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        <a href="" class="bg-dark px-2 pb-2 rounded" ><i class="fas fa-pencil-alt edit-icon text-light"></i></a></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i>TIAA, new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Experience : No Experience Required</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $60,000 - $100,000 a year</h5>
+                                    </li>
+                                </ul>
+                                <ul class="detail nav nav-tabs" id="myTab2" role="tablist">
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="detail-tab2" data-toggle="tab" href="#detail2"
+                                            role="tab" aria-controls="detail" aria-selected="false">View
+                                            Applications</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="clode-tab2" data-toggle="tab" href="#close2"
+                                            role="tab" aria-controls="close" aria-selected="true">Close</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job2.png' %}" alt="job">
+                            </div>
+
+                        </div>
+
+                        <!------------------------- Details ----------------------------------------------------------------------------------------->
+                        <div class="tab-content " id="myTabContent">
+                            <div class="tab-pane fade " id="detail2" role="tabpanel" aria-labelledby="detail-tab2">
+                                <div class="single-job mb-4 d-lg-flex justify-content-between"
+                                    style="height: 500px; overflow-y: scroll;">
+                                    <div class="job-text">
+                                        <table class="table table-bordered table-hover">
+                                            <tr class="text-center text-white " style="background-color: var(--foot);">
+                                                <th>Name</th>
+                                                <th>Address</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Experience</th>
+                                                <th>Skills</th>
+                                                <th>Resume</th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Name1</td>
+                                                <td>New City</td>
+                                                <td>9876543212</td>
+                                                <td>name@gmail.com</td>
+                                                <td>3 years</td>
+                                                <td>Html,CSS,JavaScript,Python</td>
+                                                <td>cv.pdf</td>
+                                                <td><a href="#" class=" btn  w-100"
+                                                        style="background-color: var(--heading); color: white;">Shortlist</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="tab-pane fade show active" id="close2" role="tabpanel"
+                                aria-labelledby="close-tab2">
+
+
+                            </div>
+                        </div>
+                        <!-------------------------------------- Details end ----------------------------------------------------------------------------------------->
+
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Assistant Executive - Production/ Quality Control<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                        <a href="" class="bg-dark px-2 pb-2 rounded" ><i class="fas fa-pencil-alt edit-icon text-light"></i></a></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                                <ul class="detail nav nav-tabs" id="myTab1" role="tablist">
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="detail-tab3" data-toggle="tab" href="#detail3"
+                                            role="tab" aria-controls="detail" aria-selected="false">View
+                                            Applications</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link p-2" id="clode-tab3" data-toggle="tab" href="#close3"
+                                            role="tab" aria-controls="close" aria-selected="true">Close</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job1.png' %}" alt="job">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade " id="full-time" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Asst. Manager, Production (Woven Dyeing)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job1.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Full time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Asst. Manager, Production (Woven Dyeing)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job2.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Full time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Asst. Manager, Production (Woven Dyeing)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job3.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Full time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="part-time" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Deputy Manager/ Assistant Manager - Footwear<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job2.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Part time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Deputy Manager/ Assistant Manager - Footwear<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job1.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Part time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">Deputy Manager/ Assistant Manager - Footwear<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job3.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">Part time</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade " id="remote" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">R&D Manager (Technical Lab Department)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job3.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">remote</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">R&D Manager (Technical Lab Department)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job2.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">remote</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                        <div class="single-job mb-4 d-lg-flex justify-content-between">
+                            <div class="job-text">
+                                <h4 class="font-weight-bold">R&D Manager (Technical Lab Department)<span
+                                        class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i></span></h4>
+                                <ul class="mt-4">
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-map-marker"></i> new yourk, USA</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering /
+                                            Chemistry</h5>
+                                    </li>
+                                    <li class="mb-3">
+                                        <h5><i class="fa fa-clock-o"></i> Deadline : Dec 11, 2018</h5>
+                                    </li>
+                                    <li>
+                                        <h5><i class="fas fa-money-bill"></i> Salary : $49,900 - $ 102,000</h5>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="job-img align-self-center">
+                                <img src="{% static 'images/job1.png' %}" alt="job">
+                            </div>
+                            <div class="job-btn align-self-center text-center">
+                                <a href="#" class="btn third-btn job-btn1 my-1 w-100"
+                                    style="background-color: var(--foot); color: white;">remote</a><br>
+                                <a href="#" class=" btn third-btn my-1 w-100"
+                                    style="background-color: var(--heading); color: white;">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

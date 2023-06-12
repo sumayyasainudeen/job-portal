@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" href="{% static 'images/emp1.jpg' %}" type="image/icon type">
+    <link rel="icon" href="{% static 'images/ic.png' %}" type="image/icon type">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ca2474264d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -45,24 +45,23 @@
             color: whitesmoke;
 
         }
-
         .notification {
-            text-decoration: none;
-            /* padding: 15px 26px; */
-            position: relative;
-            display: inline-block;
+          text-decoration: none;
+          /* padding: 15px 26px; */
+          position: relative;
+          display: inline-block;
         }
-
-
-
+        
+        
+        
         .notification .badge {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            padding: 5px 10px;
-            border-radius: 50%;
-            background: var(--foot);
-            color: var(--heading);
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          padding: 5px 10px;
+          border-radius: 50%;
+          background: var(--foot);
+          color: var(--heading);
         }
 
 
@@ -551,98 +550,234 @@
         }
     </style>
     <style>
-        .message-item {
-            padding: 10px;
+        .about {
+            background: #f1eade;
+            background-size: cover;
+            position: relative;
+            padding: 80px 0;
         }
 
-        .sender {
-            font-weight: bold;
+        .about:before {
+            content: "";
+            background: #f1eade;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
         }
 
-        .content {
-            margin-top: 5px;
+        .about .about-img {
+            position: relative;
+            transition: 0.5s;
         }
 
-        .date {
-            font-size: 12px;
-            color: #888;
+        .about .about-img img {
+            max-width: 100%;
+            border: 4px solid rgba(130, 129, 129, 0.2);
+            position: relative;
         }
 
-        .open-button {
-  background-color:var(--heading);
-  color: white;
-  width: 40px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 20px;
-  right: 55px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
+        .about .about-img::before {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 60px;
+            height: 60px;
+            z-index: 1;
+            content: "";
+            border-left: 5px solid var(--heading);
+            border-top: 5px solid var(--heading);
+            transition: 0.5s;
+        }
 
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  z-index: 9;
-  border-radius: 10px;
-  background: linear-gradient(to bottom, #526c87, #011234);
-}
+        .about .about-img::after {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            z-index: 2;
+            content: "";
+            border-right: 5px solid var(--heading);
+            border-bottom: 5px solid var(--heading);
+            transition: 0.5s;
+        }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background: linear-gradient(to bottom, #526c87, #011234);
-}
+        .about .about-img:hover {
+            transform: scale(1.03);
+        }
 
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
+        .about .about-img:hover::before {
+            left: 10px;
+            top: 10px;
+        }
 
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
+        .about .about-img:hover::after {
+            right: 10px;
+            bottom: 10px;
+        }
 
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: var(--heading);
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-  
-}
+        .about .content h3 {
+            font-weight: 600;
+            font-size: 26px;
+        }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: var(--foot);
-}
+        .about .content ul {
+            list-style: none;
+            padding: 0;
+        }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
+        .about .content ul li {
+            padding-bottom: 10px;
+        }
+
+        .about .content ul i {
+            font-size: 20px;
+            padding-right: 4px;
+            color: var(--heading);
+        }
+
+        .about .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 1024px) {
+            .about {
+                background-attachment: fixed;
+            }
+        }
+    .finance {
+        background: #f1eade;
+        background-size: cover;
+        position: relative;
+        padding: 80px 0;
+    }
+    .finance:before {
+        content: "";
+        background: #f1eade;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+
+    .finance .member {
+        text-align: center;
+        margin-bottom: 20px;
+        background: #343a40;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .finance .member .member-info {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: 0.2s;
+    }
+
+    .finance .member .member-info-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        transition: bottom 0.4s;
+    }
+
+    .finance .member .member-info-content h4 {
+        font-weight: 700;
+        margin-bottom: 2px;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    .finance .member .member-info-content span {
+        font-style: italic;
+        display: block;
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .finance .member:hover .member-info {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 8, 9, 0) 100%);
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 1;
+        transition: 0.4s;
+    }
+
+    .finance .member:hover .member-info-content {
+        bottom: 60px;
+        transition: bottom 0.4s;
+    }
+
+    .finance .member:hover .social {
+        bottom: 0;
+        transition: bottom ease-in-out 0.4s;
+    }
+    .why-us {
+        background: url("/static/images/why2.webp") center center;
+        background-size: cover;
+        position: relative;
+        padding: 80px 0;
+    }
+    .why-us .box {
+        padding: 50px 30px;
+        box-shadow: 0px 2px 15px rgb(12, 12, 12);
+        transition: all ease-in-out 0.3s;
+        background: #f5ebd9;
+    }
+
+    .why-us .box span {
+        display: block;
+        font-size: 28px;
+        font-weight: 700;
+        color: #eea02c;
+    }
+
+    .why-us .box h4 {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 0;
+        margin: 20px 0;
+        color: var(--foot);
+    }
+
+    .why-us .box p {
+        color: var(--foot);
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+    }
+    .why-us .box a {
+        color: white;
+        background-color: var(--heading);
+        font-size: 15px;
         
+    }
+
+    .why-us .box:hover {
+        background: var(--heading);
+        padding: 30px 30px 70px 30px;
+        box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .why-us .box:hover span,
+    .why-us .box:hover h4,
+    .why-us .box:hover p {
+        color: #fff;
+    }
+    .why-us .box:hover a{
+        background-color: var(--foot);
+        color: white;
+    }
     </style>
+   
     <header style="position: fixed; z-index:2; width: 100%;">
         <div class="container-fluid bg-white px-0">
             <div class="row gx-0">
@@ -698,16 +833,13 @@
                             <ul class="navbar-nav  ml-auto mt-2 ">
 
                                 <li class="nav-item active ">
-                                    <a class="nav-link  pt-2" href="{% url 'index' %}">Home </a>
-                                </li>
-                               
-                                {% if user.is_authenticated %}
-                                <li class="nav-item">
-                                    <a class="nav-link  pt-2 text-dark" href="{% url 'resume_upload_page' %}">Upload
-                                        your resume</a>
+                                    <a class="nav-link  pt-2" href="{% url 'emp_home' %}">Home </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  pt-2 text-dark" href="{% url 'myjobs' %}">My Jobs</a>
+                                    <a class="nav-link  pt-2 text-dark" href="{% url 'post_job_page' %}">Post New Job</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  pt-2 text-dark" href="{% url 'postedjobs' %}">My Jobs</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link notification pt-2 text-dark mx-1 dropdown-toggle" href="#"
@@ -722,23 +854,23 @@
                                         <!-- Dropdown items -->
                                         <a class="dropdown-item" href="#">
                                             <div class="message-item">
-                                                <div class="sender">John Doe</div>
+                                                <div class="sender ">John Doe</div>
                                                 <div class="content">Lorem ipsum dolor sit amet, consectetur .</div>
-                                                <div class="date">June 10, 2023</div>
+                                                <div class="date ">June 10, 2023</div>
                                             </div>
                                         </a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">John Doe</div>
+                                            <div class="sender ">John Doe</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">John Doe</div>
+                                            <div class="sender ">John Doe</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">John Doe</div>
+                                            <div class="sender ">John Doe</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
@@ -761,22 +893,22 @@
                                         <h6 class="dropdown-header">Notifications</h6>
                                         <!-- Dropdown items -->
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">Sara Elino</div>
+                                            <div class="sender ">Sara Elino</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">Sara Elino</div>
+                                            <div class="sender ">Sara Elino</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">Sara Elino</div>
+                                            <div class="sender ">Sara Elino</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
                                         <a class="dropdown-item" href="#"><div class="message-item">
-                                            <div class="sender">Sara Elino</div>
+                                            <div class="sender ">Sara Elino</div>
                                             <div class="content">Lorem ipsum dolor sit amet, consectetur.</div>
                                             <div class="date">June 10, 2023</div>
                                         </div></a>
@@ -786,31 +918,15 @@
                                         <a class="dropdown-item" href="#">View All Notifications</a>
                                     </div>
                                 </li>
-
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link notification pt-2 text-dark mx-1" href="{% url 'notifications' %}"
-                                    data-target="tooltip" title="Notifications"><span><i class="fas fa-bell"></i></span><span class="badge">2</span></a>
-                                </li>
-                                 -->
-                                <li class="nav-item">
+                                <!-- <li class="nav-item"> -->
+                                    <!-- <a class="  pt-2 text-dark" href="{% url 'myjobs' %}" st><i class="fas fa-user"></i> COMPANY NAME</a> -->
+                                    <!-- <label class="text-dark pt-2 px-3" for=""><i class="fas fa-user text-dark"></i> </label> -->
+                                <!-- </li> -->
+                                <li class="nav-item">   
                                     <a class="nav-link btn h-100 text-center py-2 mx-2"
-                                        style="background-color: var(--foot); color: var(--heading);"
-                                        href="{% url 'signout' %}">Sign Out</a>
+                                        style="background-color: var(--foot); color: var(--heading);" href="{% url 'signout' %}" >Sign Out</a>
                                 </li>
-                                {% else %}
-                                <li class="nav-item">
-                                    <a class="nav-link btn h-100 text-center pt-2 mx-2"
-                                        style="background-color: var(--foot); color: var(--heading);"
-                                        href="{% url 'js_signin_page' %}">Sign In</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{% url 'em_signin_page' %}"
-                                        class="btn  rounded-1 py-2 px-md-5 d-none d-lg-block"
-                                        style="background-color: var(--heading); transition: background-color 0.3s ease;">
-                                        Employers/Post Job&nbsp;<i class="fa fa-arrow-right ms-3"></i></a>
-                                </li>
-                                {% endif %}
+                              
                             </ul>
 
                         </div>
@@ -826,10 +942,8 @@
         {% block content %}
 
         {% endblock %}
-    
 
     </div>
-   
     <section id="sec_contact">
         <div class="  text-light footer wow fadeIn" data-wow-delay="0.1s" style="background-color: var(--foot);">
             <div class="container pb-5" style="font-family: verdana;">
@@ -895,14 +1009,12 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .modal-content {
-            background: linear-gradient(to bottom, #526c87, #011234);
-            /* Replace the colors with your desired gradient */
-            color: #fff;
-            /* Set the text color */
-        }
+            background: linear-gradient(to bottom, #526c87, #011234); /* Replace the colors with your desired gradient */
+            color: #fff; /* Set the text color */
+            }
 
         .animated {
             animation-duration: 1s;
@@ -1037,37 +1149,132 @@
             });
         })(jQuery);
     </script>
-<!--chat Modal-->
 
 
+<!--signin Modal -->
+<div class="modal" id="signinModal1">
+    <div class="modal-dialog">
+        <div class="modal-content  text-white" >
 
-<div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="chatModalLabel">Chat Bot</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <!-- Modal Header -->
+            <div class="modal-header ">
+                <h4 class="modal-title " >Sign In</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
+
+            <!-- Modal body -->
             <div class="modal-body">
-                <!-- Place your chat bot content here -->
-                <p>This is the chat bot content.</p>
+                <form action="" method='post' class="was-validated ">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label class="form-label" for="uname">User Name</label>
+                        <div class="input-group mb-3">
+
+                            <input type="text" class="form-control" name="username" placeholder="Enter User Name"
+                                required>
+                        </div>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="pwd">Password</label>
+
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit " class="btn text-white" style="background-color: var(--foot);">Submit</button>
+                    </div><br><br>
+
+                    <div class="text-center">
+                        <h6 class="text-center">Not a Member?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signupModal1">Sign Up</a>
+                    </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+
         </div>
     </div>
 </div>
 
-<script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-    
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-    </script>
+<!-- Sign Up Modal -->
+
+<div class="modal" id="signupModal1">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"  >Sign Up</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" method="post" class="was-validated "
+                    enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="form-label" for="fname">First Name</label>
+                        <input type="text" name="firstname" class="form-control" placeholder="Enter Name"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="name">Last Name</label>
+                        <input type="text" name="lastname" class="form-control" placeholder="Enter Name"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="uname">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="uname">Username</label>
+                        <input type="text" name="username" class="form-control" placeholder="Enter username"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="pwd">Password:</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter password"
+                            required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">Please fill out this field</div>
+                    </div>
+
+                   
+                    <div class="text-center">
+                        <button type="submit" class="btn text-white" style="background-color: var(--foot);">Submit</button>
+                    </div><br><br>
+
+                    <div class="text-center">
+                        <h6 class="text-center">Already a Member?</h6>
+                        <a href="#" data-toggle="modal" data-target="#signinModal1">Sign In</a>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
 </body>
 
 </html>

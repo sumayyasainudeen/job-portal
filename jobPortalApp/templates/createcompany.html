@@ -1,0 +1,76 @@
+{% extends 'emp_base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .company{
+        background-image: url("/static/images/cmp1.jpg") ;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    .profile{
+        border: 1px solid rgb(40, 39, 39);
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+        /* background-color: rgba(16, 15, 15, 0.7); */
+
+    }
+   
+   
+</style>
+
+<div class="company   " >
+    <div style="background-color: rgba(16, 15, 15, 0.7); height: 100vh;">
+    <div class="profile col-md-6 mx-auto  rounded"  data-aos="fade-up">
+        <div class="section-title pt-5">
+            <h2 style="font-family: Lucida Handwriting;">JobsNow</h2>
+            <p class="text-light">Build Your Company Profile</p>
+        </div>
+
+        <form action="" method="post" class="company-profile-form  p-5 text-white" >
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" name="company_name" class="form-control"
+                    placeholder="Enter company name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company-description">Company Description</label>
+                <textarea id="company-description" name="company_description" class="form-control"
+                    placeholder="Enter company description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="company-website">Company Website</label>
+                <input type="url" id="company-website" name="company_website" class="form-control"
+                    placeholder="Enter company website" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company-address">Company Address</label>
+                <input type="text" id="company-address" name="company_address" class="form-control"
+                    placeholder="Enter company address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="company-phone">Company Phone Number</label>
+                <input type="tel" id="company-phone" name="company_phone" class="form-control"
+                    placeholder="Enter company phone number" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn text-white mt-5" style="background-color: var(--heading);">Create Profile</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock %}

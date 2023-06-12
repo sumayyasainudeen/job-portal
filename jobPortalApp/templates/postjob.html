@@ -1,0 +1,215 @@
+{% extends 'emp_base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .company {
+        background-image: url("/static/images/job8.jpg");
+        background-repeat: no-repeat;
+        /* height: 115vh; */
+        background-size: 100% 100%;
+        height: 100%;
+            margin: 0;
+            padding: 0;
+    }
+    section{
+        box-shadow: 5px 5px 10px black;
+    }
+</style>
+
+<section class="company py-5">
+    
+    <div class="container">
+        <div class=" row">
+            <div class="col-md-6">
+                <form action="" method="post" class="job-post-form">
+                    {% csrf_token %}
+                    <section class="job-details  p-3 rounded ">
+                        <h2 class="section-heading py-4">Basic Job Details</h2>
+                        <div class="form-group">
+                            <label for="job-title">Job Title</label>
+                            <input type="text" id="job-title" name="job_title" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vacancies">Number of Vacancies</label>
+                            <input type="number" id="vacancies" name="vacancies" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="salary">Monthly In-hand Salary</label>
+                            <input type="text" id="salary" name="salary" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <select id="location" name="location" class="form-control" required>
+                                <option value="">Select Location</option>
+                                <option value="location1">Location 1</option>
+                                <option value="location2">Location 2</option>
+                                <option value="location3">Location 3</option>
+                            </select>
+                        </div>
+                    </section>
+
+            </div>
+            <div class="col-md-6">
+                <section class="candidate-requirements p-3 rounded">
+                    <h2 class="section-heading py-3">Candidate Requirements</h2>
+                    <div class="form-group">
+                        <label for="min-experience">Minimum Experience</label>
+                        <select id="min-experience" name="min_experience" class="form-control" required>
+                            <option value="">Select Minimum Experience</option>
+                            <option value="0">0 years</option>
+                            <option value="1">1 year</option>
+                            <option value="2">2 years</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="max-experience">Maximum Experience</label>
+                        <select id="max-experience" name="max_experience" class="form-control" required>
+                            <option value="">Select Maximum Experience</option>
+                            <option value="1">1 year</option>
+                            <option value="2">2 years</option>
+                            <option value="3">3 years</option>
+                        </select>
+                    </div>
+
+                  
+
+                    <div class="form-group">
+                        <label for="job-description">Job Description</label>
+                        <textarea id="job-description" name="job_description" class="form-control" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">Skills Needed</label>
+                        <input type="text" id="skills" name="skills" class="form-control" required>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn text-white mt-5" style="background-color: var(--foot);">Post Job</button>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="profile col-md-5 rounded bg-light text-dark py-5"  data-aos="fade-up">
+
+
+        <form action="" method="post" class="job-post-form">
+            {% csrf_token %}
+
+            <section class="job-details border p-3 rounded">
+                <h2 class="section-heading">Basic Job Details</h2>
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" name="job_title" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vacancies">Number of Vacancies</label>
+                    <input type="number" id="vacancies" name="vacancies" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location" class="form-control" required>
+                        <option value="">Select Location</option>
+                        <option value="location1">Location 1</option>
+                        <option value="location2">Location 2</option>
+                        <option value="location3">Location 3</option>
+                    </select>
+                </div>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <section class="candidate-requirements">
+                <h2 class="section-heading">Candidate Requirements</h2>
+                <div class="form-group">
+                    <label for="min-experience">Minimum Experience</label>
+                    <select id="min-experience" name="min_experience" class="form-control" required>
+                        <option value="">Select Minimum Experience</option>
+                        <option value="0">0 years</option>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="max-experience">Maximum Experience</label>
+                    <select id="max-experience" name="max_experience" class="form-control" required>
+                        <option value="">Select Maximum Experience</option>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                        <option value="3">3 years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Monthly In-hand Salary</label>
+                    <input type="text" id="salary" name="salary" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="job-description">Job Description</label>
+                    <textarea id="job-description" name="job_description" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills Needed</label>
+                    <input type="text" id="skills" name="skills" class="form-control" required>
+                </div>
+            </section>
+
+           <section class="candidate-requirements">
+                <h2 class="section-heading">Candidate Requirements</h2>
+                <div class="form-group">
+                    <label for="min-experience">Minimum Experience</label>
+                    <select id="min-experience" name="min_experience" class="form-control" required>
+                        <option value="">Select Minimum Experience</option>
+                        <option value="0">0 years</option>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="max-experience">Maximum Experience</label>
+                    <select id="max-experience" name="max_experience" class="form-control" required>
+                        <option value="">Select Maximum Experience</option>
+                        <option value="1">1 year</option>
+                        <option value="2">2 years</option>
+                        <option value="3">3 years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary">Monthly In-hand Salary</label>
+                    <input type="text" id="salary" name="salary" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="job-description">Job Description</label>
+                    <textarea id="job-description" name="job_description" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills Needed</label>
+                    <input type="text" id="skills" name="skills" class="form-control" required>
+                </div>
+            </section>
+
+    </div> -->
+<!-- </div>
+</section> -->
+
+{% endblock %}

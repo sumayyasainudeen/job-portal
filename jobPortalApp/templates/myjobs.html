@@ -5,214 +5,35 @@
 JobsNow-Online Job Portal
 {% endblock %}
 
+
 {% block content %}
-
-<!-- carousel -->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active" style="font-family: 'Montserrat', sans-serif;">
-            <img class="d-block w-100" src="{% static 'images/j1.jpg' %}" alt="First slide">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 800px;">
-                    <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">
-                        <i class="fa-sharp fa-regular fa-dash "></i>Find Popular Jobs<i
-                            class="fa-sharp fa-regular fa-dash"></i>
-                    </h6>
-                    <h1 class=" text-white mb-4 animated slideInDown" style="font-size:9vh;">Build Your Career</h1>
-                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
-                        class="p-3 animated slideInDown">
-                        <table class=" p-4">
-                            <tr>
-                                <td> <input type="text" class="form-control rounded-0 "
-                                        placeholder="Skills,Designation,Companies"></td>
-                                <td> <select class="form-control rounded-0 align-middle">
-                                        <option selected disabled>Select Location</option>
-                                        <option value="option1">Kochi</option>
-                                        <option value="option2">Trivandrum</option>
-                                        <option value="option3">Banglore</option>
-                                        <option value="option4">Chennai</option>
-                                        <option value="option5">Mumbai</option>
-                                        <option value="option6">Delhi</option>
-
-                                    </select>
-                                </td>
-                                <td> <select class="form-control rounded-0 align-middle">
-                                        <option selected disabled>Select Category</option>
-                                        <option value="option1">All Category</option>
-                                        <option value="option2">Full Time</option>
-                                        <option value="option3">Part Time</option>
-                                        <option value="option3">Remote</option>
-                                    </select>
-                                </td>
-                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
-                                        style="background-color: rgb(255, 111, 0);">
-                                        <i class="fas fa-search"></i></button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="carousel-item" style="font-family: 'Montserrat', sans-serif;">
-            <img class="d-block w-100" src="{% static 'images/j2.jpg' %}" alt="Second slide">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <div class="p-3" style="max-width: 700px;">
-                    <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">
-                        <i class="fa-sharp fa-regular fa-dash"></i></i>Find Popular Jobs<i
-                            class="fa-sharp fa-regular fa-dash"></i></i>
-                    </h6>
-                    <h1 class=" text-white mb-4 animated slideInDown" style="font-size:9vh;">Build Your Career</h1>
-                    <form action="" style="background-color: rgba(162, 162, 166, 0.3);"
-                        class="p-3 animated slideInDown">
-                        <table class=" p-4">
-                            <tr>
-                                <td> <input type="text" class="form-control rounded-0 "
-                                        placeholder="Skills,Designation,Companies"></td>
-                                <td> <select class="form-control rounded-0 align-middle">
-                                        <option selected disabled>Select Location</option>
-                                        <option value="option1">Kochi</option>
-                                        <option value="option2">Trivandrum</option>
-                                        <option value="option3">Banglore</option>
-                                        <option value="option4">Chennai</option>
-                                        <option value="option5">Mumbai</option>
-                                        <option value="option6">Delhi</option>
-
-                                    </select>
-                                </td>
-                                <td> <select class="form-control rounded-0 align-middle">
-                                        <option selected disabled>Select Category</option>
-                                        <option value="option1">All Category</option>
-                                        <option value="option2">Full Time</option>
-                                        <option value="option3">Part Time</option>
-                                        <option value="option3">Remote</option>
-                                    </select>
-                                </td>
-                                <td> <button type="submit" class="btn  rounded-0 btn-block text-white"
-                                        style="background-color: rgb(255, 111, 0);">
-                                        <i class="fas fa-search"></i></button>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-<!-- Category Area Starts -->
-<section class="category-area py-5">
-    <div class="container  " data-aos="fade-up">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title ">
-                    <h2>Category</h2>
-                    <p>Find job by category</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4">
-                    <img src="{% static 'images/cat1.png' %}" alt="category">
-                    <a href="{% url 'software' %}" class="stretched-link">
-                        <h5>IT & Software</h5>
-                    </a>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4">
-                    <img src="{% static 'images/cat2.png' %}" alt="category">
-                    <h5>accounting-Finance</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4">
-                    <img src="{% static 'images/cat3.png' %}" alt="category">
-                    <h5>telecommunication</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4">
-                    <img src="{% static 'images/cat4.png' %}" alt="category">
-                    <h5>garments & textile</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4 mb-lg-0">
-                    <img src="{% static 'images/cat5.png' %}" alt="category">
-                    <h5>marketing and sales</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4 mb-lg-0">
-                    <img src="{% static 'images/cat6.png' %}" alt="category">
-                    <h5>engineer & architech</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center mb-4 mb-md-0">
-                    <img src="{% static 'images/cat7.png' %}" alt="category">
-                    <h5>design & crative</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-category text-center">
-                    <img src="{% static 'images/cat8.png' %}" alt="category">
-                    <h5>customer support</h5>
-                    <h6>250 open job</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Category Area End -->
-
-<!-- Jobs Area Starts -->
-<section class="jobs-area py-5">
+<section id="myjobs" class="bg-light">
     <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-            <h2>Job Search</h2>
-            <p>Browse recent jobs</p>
-        </div>
+        <!-- <div class="section-title">
+            <h2>Browse saved jobs</h2>
+            <p>IT & Software</p>
+        </div> -->
+
         <div class="row">
-            <div class="col-lg-12">
-                <div class="jobs-tab tab-item ">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <div class="col-lg-12 pt-5 border-bottom">
+                <div class="jobs-tab tab-item float-left ">
+                    <ul class="nav nav-tabs text-laft" id="myTab" role="tablist" >
                         <li class="nav-item active">
-                            <a class="nav-link p-2" id="home-tab" data-toggle="tab" href="#recent" role="tab"
-                                aria-controls="home" aria-selected="true">Recent</a>
+                            <a class="nav-link p-2 notification " id="home-tab" data-toggle="tab" href="#saved" role="tab"
+                                aria-controls="home" aria-selected="true">Saved<span class="badge">2</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-2" id="profile-tab" data-toggle="tab" href="#full-time" role="tab"
-                                aria-controls="profile" aria-selected="false">Full Time</a>
+                            <a class="nav-link p-2 notification" id="profile-tab" data-toggle="tab" href="#applied" role="tab"
+                                aria-controls="profile" aria-selected="false">Applied<span class="badge">4</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-2" id="contact-tab" data-toggle="tab" href="#part-time" role="tab"
-                                aria-controls="part-time" aria-selected="false">Part Time</a>
+                            <a class="nav-link p-2 notification" id="contact-tab" data-toggle="tab" href="#interviews" role="tab"
+                                aria-controls="interviews" aria-selected="false">Interviews<span class="badge">3</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-2" id="contact-tab2" data-toggle="tab" href="#remote" role="tab"
-                                aria-controls="remote" aria-selected="false">Remote</a>
+                            <a class="nav-link p-2 notification" id="contact-tab2" data-toggle="tab" href="#archived" role="tab"
+                                aria-controls="archived" aria-selected="false">Archived<span class="badge">5</span></a>
                         </li>
                     </ul>
                 </div>
@@ -222,7 +43,7 @@ JobsNow-Online Job Portal
         <div class="row my-3">
             <div class="col-lg-12">
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade show active" id="saved" role="tabpanel" aria-labelledby="home-tab">
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
                             <div class="job-text">
                                 <h4 class="font-weight-bold ">Software Engineer <span class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -508,7 +329,7 @@ JobsNow-Online Job Portal
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade " id="full-time" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade " id="applied" role="tabpanel" aria-labelledby="home-tab">
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
                             <div class="job-text">
                                 <h4 class="font-weight-bold">Asst. Manager, Production (Woven Dyeing)<span class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -536,7 +357,7 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">Full time</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Applied</a>
                             </div>
                         </div>
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
@@ -566,7 +387,7 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">Full time</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Applied</a>
                             </div>
                         </div>
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
@@ -596,12 +417,12 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">Full time</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Applied</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tab-pane fade " id="part-time" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade " id="interviews" role="tabpanel" aria-labelledby="home-tab">
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
                             <div class="job-text">
                                 <h4 class="font-weight-bold">Deputy Manager/ Assistant Manager - Footwear<span class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -694,7 +515,7 @@ JobsNow-Online Job Portal
                         </div>
                     </div>
 
-                    <div class="tab-pane fade " id="remote" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="tab-pane fade " id="archived" role="tabpanel" aria-labelledby="home-tab">
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
                             <div class="job-text">
                                 <h4 class="font-weight-bold">R&D Manager (Technical Lab Department)<span class="text-right ml-3"><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -722,7 +543,7 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">remote</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Archived</a>
                             </div>
                         </div>
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
@@ -752,7 +573,7 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">remote</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Archived</a>
                             </div>
                         </div>
                         <div class="single-job mb-4 d-lg-flex justify-content-between">
@@ -782,7 +603,7 @@ JobsNow-Online Job Portal
                                 <a href="#" class="btn third-btn job-btn1 my-1 w-100"
                                     style="background-color: var(--foot); color: white;">remote</a><br>
                                 <a href="#" class=" btn third-btn my-1 w-100"
-                                    style="background-color: var(--heading); color: white;">Apply</a>
+                                    style="background-color: var(--heading); color: white;">Archived</a>
                             </div>
                         </div>
                     </div>
@@ -792,166 +613,7 @@ JobsNow-Online Job Portal
 
             </div>
         </div>
-        <div class="more-job-btn mt-5 text-center">
-            <a href="#" class="btn " style="background-color: var(--foot); color: white;">more job post</a>
-        </div>
     </div>
 </section>
-<!-- Jobs Area End -->
-
-<!--test-->
-<section id="test" class="test py-5">
-    <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-            <h2>JobsNow</h2>
-            <p>Happy Employee</p>
-        </div>
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="2000">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0"> </li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"> </li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item">
-                    <div class="card border-0 card-0">
-                        <div class="card profile py-3 px-4">
-                            <div class="text-center"> <img src="{% static 'images/box1.jpg' %}"
-                                    class="img-fluid profile-pic"> </div>
-                            <h6 class="mb-0 mt-2 text-center"> Ritu Jerath </h6>
-                        </div>
-                        <!-- <img class="img-fluid open-quotes" src="{% static 'images/op.jpg' %}" width="20" height="20">   -->
-                        <i class="open-quotes fas fa-quote-left" width="20" height="20"></i>
-                        <p class="content mb-0"> Onboarding is seamless and paperless - The OneTrade team keeps you
-                            updated on every aspect of the transaction. We like the experience for its speed,
-                            transparency, and ease of transaction. For any queries, our Investment Manager is very
-                            responsive.</p> <i class="close-quotes fas fa-quote-right  ml-auto" width="20"
-                            height="20"></i>
-                    </div>
-                </div>
-                <div class="carousel-item active">
-                    <div class="card border-0 card-0">
-                        <div class="card profile py-3 px-4">
-                            <div class="text-center">
-                                <img src="{% static 'images/box3.jpg' %}" class="img-fluid profile-pic">
-                            </div>
-                            <h6 class="mb-0 mt-2"> Saransh Aggarwal </h6>
-                        </div> <i class="open-quotes fas fa-quote-left" width="20" height="20"></i>
-                        <p class="content mb-0"> I had been averse to investing in real estate due to uncertainties and
-                            lack of clarity. OneTrade has changed all of this for me so much that my family and I have
-                            become big fans of their CRE offerings. </p> <i
-                            class="close-quotes fas fa-quote-right  ml-auto" width="20" height="20"></i>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="card border-0 card-0">
-                        <div class="card profile py-3 px-4">
-                            <div class="text-center"> <img src="{% static 'images/box4.jpg' %}"
-                                    class="img-fluid profile-pic"> </div>
-                            <h6 class="mb-0 mt-2 text-center"> Viraj Gada </h6>
-                        </div>
-                        <i class="open-quotes fas fa-quote-left" width="20" height="20"></i>
-                        <p class="content mb-0"> Simply the best way to invest in grade-A commercial assets. OneTrade’s
-                            strong emphasis on asset quality and transparency is what sold it for me. The dashboard also
-                            makes it easy to track my investment performance at any time.
-                        </p>
-                        <i class="close-quotes fas fa-quote-right  ml-auto" width="20" height="20"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--  Contact  -->
-<section id="contact" class="contact py-5">
-    <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div>
-    </div>
-
-    <div data-aos="fade-up">
-        <iframe style="border:0; width: 100%; height: 350px;"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-            frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="container" data-aos="fade-up">
-
-        <div class="row mt-5">
-
-            <div class="col-lg-4">
-                <div class="info">
-                    <div class="address">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Location:</h4>
-                        <p>A108 Adam Street, New York, NY 535022</p>
-                    </div>
-
-                    <div class="open-hours">
-                        <i class="far fa-clock"></i>
-                        <h4>Open Hours:</h4>
-                        <p>
-                            Monday-Saturday:<br>
-                            09:00 AM - 06.00 PM
-                        </p>
-                    </div>
-
-                    <div class="email">
-                        <i class="far fa-envelope"></i>
-                        <h4>Email:</h4>
-                        <p>info@example.com</p>
-                    </div>
-
-                    <div class="phone">
-                        <i class="fas fa-phone"></i>
-                        <h4>Call:</h4>
-                        <p>+7025845854</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-8 mt-5 mt-lg-0">
-
-                <form action="" method="post" role="form" class="one-email-form">
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                required>
-                        </div>
-                        <div class="col-md-6 form-group mt-3 mt-md-0">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                                required>
-                        </div>
-                    </div>
-                    <div class="form-group mt-3">
-                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                            required>
-                    </div>
-                    <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="8" placeholder="Message"
-                            required></textarea>
-                    </div>
-
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- End Contact  -->
-
-
-
-
 
 {% endblock %}

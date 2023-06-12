@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .main {
+        background-image: url("{% static 'images/j1.jpg' %}");
+        background-size: cover;
+        height: 100vh;
+    }
+    .signup {
+        background-color: rgb(1, 1, 31);
+        opacity: 0.9;
+        border-radius: 10px;
+        padding: 20px;
+        color: white;
+    }
+  
+</style>  
+
+<div class="main d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card signup">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4 ">Sign Up</h2>
+                        <form action="{% url 'jobseeker_signup' %}" method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="fname">First Name</label>
+                                <input type="text" name="firstname" class="form-control" placeholder="Enter Name" required>
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">Please fill out this field</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name</label>
+                                <input type="text" name="lastname" class="form-control" placeholder="Enter Name" required>
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">Please fill out this field</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">Please fill out this field</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">Please fill out this field</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">Please fill out this field</div>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn text-white " style="background-color: var(--heading);">Submit</button>
+                            </div>
+                            <div class="text-center">
+                                <p class="mb-0">Already a Member? <a href="{% url 'js_signin_page' %}">Sign In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

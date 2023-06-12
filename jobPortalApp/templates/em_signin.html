@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow - Online Job Portal
+{% endblock %}
+
+{% block content %}
+<style>
+    .main {
+        background-image: url("{% static 'images/j1.jpg' %}");
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .signin {
+        background-color: rgb(1, 1, 31);
+        opacity: 0.9;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .form-label {
+        text-align: left;
+    }
+
+    .form-control {
+        background-color: #323232;
+        color: #fff;
+    }
+
+    .btn {
+        background-color: var(--heading);
+    }
+
+    .btn:hover {
+        background-color: var(--heading-hover);
+    }
+</style>  
+
+<div class="main d-flex align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card signin">
+                    <form action="{% url 'employer_signin' %}" method="post" class="was-validated text-light" >
+                        {% csrf_token %}
+                        <h2 class="my-4 ">Sign In</h2>
+                        <div class="form-group">
+                            <label class="form-label" for="uname">User Name</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="username" placeholder="Enter User Name" >
+                            </div>
+                            <div class="valid-feedback">Valid</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="pwd">Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Enter Password" >
+                            <div class="valid-feedback">Valid</div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn text-white">Submit</button>
+                        </div><br><br>
+
+                        <div class="text-center">
+                            <h6 class="text-center">Not a Member?</h6>
+                            <a href="{% url 'em_signup_page' %}">Sign Up</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

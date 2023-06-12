@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+JobsNow-Online Job Portal
+{% endblock %}
+
+
+{% block content %}
+<style>
+    .company {
+        background-image: url("/static/images/job8.jpg");
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-size: 100% 100%;
+        /* height: 100%; */
+            margin: 0;
+            padding: 0;
+    }
+
+    .upload {
+        box-shadow: 5px 5px 10px black;
+    }
+</style>
+
+<section class="company py-5">
+
+    <div class="container">
+        
+        <div class=" upload col-md-5 rounded py-5">
+            <form action="" method="post" class="job-post-form">
+                {% csrf_token %}
+                <div class="text-center">
+                    <h2 class="mb-4">Upload Resume</h2>
+                </div>
+            
+                <div class="form-group border border-dark rounded p-3">
+                    <label for="resume" class="form-label">Choose a file:</label>
+                    <input type="file" id="resume" name="resume" class="form-control-file" accept=".pdf, .doc, .docx" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn text-white mt-2 w-100"
+                        style="background-color: var(--foot);">Upload</button>
+                </div>
+            </form>
+        </div>
+</section>
+
+
+{% endblock %}
